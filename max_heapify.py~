@@ -1,0 +1,16 @@
+def max_heapify(list,i):
+	n=len(list)
+	integer=i
+	largest=i
+	left=(2*i)+1
+	right=(2*i)+2
+	if left<n and list[left]>list[largest]:
+		largest=left
+	if right<n and list[right]>list[largest]:
+		largest=right
+	if largest!=integer:
+		list[largest],list[integer]=list[integer],list[largest]
+	max_heapify(list,largest) 
+	
+		
+	
