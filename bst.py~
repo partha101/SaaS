@@ -26,7 +26,7 @@ class BSTNode(object):
 		if self.roght is not None:
 			return self.right.find_min()
 		current=self
-		while current.parent is not None and current is current.parent.right:
+		while current.parent is not None and current is curret.parent.right:
 			current=current.parent
 		return current.parent
 	def insert(self,node):
@@ -64,7 +64,7 @@ class BST(object):
 			self.root.insert(node)
 	def inorder_traverse(self):
 		current=self.root
-		if current is not None:
+		if curret is not None:
 			current.left.inorder_traverse()
 			print current.key
 			current.right.inorder_traverse()
@@ -88,7 +88,4 @@ else:
 	
 			
 		
-<<<<<<< HEAD
 
-=======
->>>>>>> c0d003c01e93ca2b4a25a7b6b6036b1552a6f7f9
