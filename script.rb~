@@ -1,0 +1,6 @@
+array=[12,23,444,12]
+for i in 0..3
+	print array[i]
+end
+
+
