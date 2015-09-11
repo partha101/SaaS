@@ -1,9 +1,12 @@
 def merge_sort(list):
-    n=len(list)
-    middle=n//2
-    L=merge_sort(list[:middle])
-    R=merge_sort(list[middle:])
-    print merge(L,R)
+    if len(list)==1:
+        return list
+    else:
+        n=len(list)
+        middle=n//2
+        L=merge_sort(list[:middle])
+        R=merge_sort(list[middle:])
+        print merge(L,R)
 
 
 
