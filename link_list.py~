@@ -49,7 +49,7 @@ class linked_list(object):
 					current.right=current.right.right
 					current.right.right.left=current
 					break
-				current=current.right
+				current=current.next
 
 
 
