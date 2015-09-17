@@ -44,4 +44,12 @@ class link_list(object):
 					current.insert_mid(key)
 					break
 				current=current.next
-				
+	def insert_first(self,key):
+		node=llnode(key)
+		if self.root is None:
+			self.root=node
+		else:
+			temp=self.root
+			self.root=node
+			self.root.next=temp
+			
