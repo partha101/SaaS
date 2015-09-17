@@ -7,6 +7,12 @@ class llnode(object):
 			self.next=node
 		else:
 			self.next.insert(node)
+	def insert_mid(self,key):
+		node=llnode(key)
+		current=self.next
+		self.next=node
+		node.next=current
+		
 class link_list(object):
 	def __init__(self):
 		self.root=None
@@ -31,4 +37,11 @@ class link_list(object):
 					current.next=current.next.next
 					break
 				current=current.next
-
+	def insert_middle(self,val,key):
+		current=self.root
+		while current.next is not None:
+				if current.key==val:
+					current.insert_mid(key)
+					break
+				current=current.next
+				
