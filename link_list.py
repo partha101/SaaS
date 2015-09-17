@@ -37,5 +37,13 @@ class linked_list(object):
             while current is not None:
                 print current.key
                 current=current.right
+    def delete(self,val):
+	    if self.root.key==val:
+		    current=self.root
+		    current.right.left=None
+		    self.root==current.right
+	    else:
+	        self.root.delete(val)
+
 
 
