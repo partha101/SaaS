@@ -15,4 +15,20 @@ class link_list(object):
 		if self.root is None:
 			self.root=node
 		else:
-			self.root.insert(key)
+			self.root.insert(node)
+	def print_list(self):
+		current=self.root
+		while current is not None:
+			print current.key
+			current=current.next
+	def delete(self,val):
+		if self.root.key==val:
+			self.root=self.root.next
+		else:
+			current=self.root
+			while current.next is not None:
+				if current.next.key==val:
+					current.next=current.next.next
+					break
+				current=current.next
+
