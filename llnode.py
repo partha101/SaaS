@@ -12,6 +12,11 @@ class llnode(object):
 		current=self.next
 		self.next=node
 		node.next=current
+	def print_reverse(self):
+                current=self
+                while current.next is not None:
+                    current.next.print_reverse()
+                print self.key
 		
 class link_list(object):
 	def __init__(self):
@@ -52,4 +57,6 @@ class link_list(object):
 			temp=self.root
 			self.root=node
 			self.root.next=temp
+	def rev_print(self):
+                self.root.print_reverse()
 			
