@@ -13,7 +13,8 @@ class llnode(object):
 		self.next=node
 		node.next=current
 	def print_reverse(self):
-		if self is None:
+		if self.next is None:
+			print self.key
 			return
 		self.next.print_reverse()
 		print self.key
